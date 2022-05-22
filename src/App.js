@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import AnimatedTitle from './components/AnimatedTitle';
+import useMultipleTypeWriter from './hooks/useMultipleTypeWriter';
+
 
 function App() {
+  const typing = useMultipleTypeWriter(["Programmer", "Webdev", "Apps", "Java", "C#", "PHP", "JS", "TS", "React          Native", "Kotlin", "SQL", "MongoDB", "WuttiFrutti"])
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div className='img-background'>
+        <div className='heading-border'>
+          <header className="App-header">
+            {/* <Heading>{other}</Heading> */}
+            <AnimatedTitle text={typing} />
+
+
+          </header>
+        </div>
+
+        <div className='heading-border' style={{ marginTop: "15em" }}>
+          <div style={{ height: "100vh" }}></div>
+        </div>
+      </div>
     </div>
   );
 }

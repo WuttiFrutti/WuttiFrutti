@@ -1,0 +1,61 @@
+.App-header {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  margin-left: 10%;
+  justify-content: center;
+}
+
+.App {
+  min-height: 100vh;
+  color: white;
+  background-color: #282c34;
+}
+
+.img-background {
+  // background-color: white;
+  background-image: url(../public/assets/ski-lounge.webp);
+  padding: 4em;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: grid;
+  row-gap: 3em;
+  .heading-border {
+    padding: 1em;
+    background-color: #282c34;
+
+    // margin: 1em;
+    border-radius: 1em;
+  }
+}
+
+.title {
+  color: white;
+}
+
+.animated-title {
+  .colored-letter {
+    transition: color 0.2s;
+    cursor: pointer;
+    div {
+      transition: bottom ease-in-out 0.05s;
+      position: relative;
+    }
+  }
+  padding-right: 10px;
+  display: flex;
+  border-right: 0.15em solid white;
+  animation: blink-caret 1s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
